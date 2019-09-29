@@ -15,7 +15,7 @@ export class ForumComponent implements OnInit {
   @Input('candiID') canID;
 
   ngOnInit() {
-    this._candidateService.getforums(1)
+    this._candidateService.getforums(this.canID)
       .subscribe(data => this.forums = data);
   }
 
